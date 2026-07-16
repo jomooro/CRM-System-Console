@@ -1,0 +1,8 @@
+{
+  "name": "CRM System Console",
+  "description": "An interactive, unified CRM and database administration dashboard showcasing core CRM features, support ticketing, simulated PostgreSQL performance tuning, SQL sandbox, Excel-style spreadsheet grids, Power BI charts, and REST API playgrounds.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

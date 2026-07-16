@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  
+  --color-brand-bg: var(--brand-bg);
+  --color-brand-text: var(--brand-text);
+  --color-brand-border: var(--brand-border);
+}
+
+:root {
+  --brand-bg: #FAFAFA;
+  --brand-text: #18181B;
+  --brand-border: #D4D4D8;
+}
+
+:root.theme-dark {
+  --brand-bg: #0F172A;
+  --brand-text: #F1F5F9;
+  --brand-border: #334155;
+}
+
+/* Custom High-Density Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(20, 20, 20, 0.05);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(20, 20, 20, 0.3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(20, 20, 20, 0.6);
+}
+
+/* Smooth Transition rules suitable for Brutalist / High Density */
+button, input, select, textarea, div {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 100ms;
+}
+
+@keyframes theme-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-theme-fade {
+  animation: theme-fade 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
